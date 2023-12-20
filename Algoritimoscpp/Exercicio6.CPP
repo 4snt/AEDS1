@@ -6,10 +6,10 @@ using namespace std;
 
 int main() {
     int escolha;
-    cout << "[1]-Verificador de numeros repetidos: ";
-    cout << "[2]-Identificador de numeros divisiveis:";
-    cout << "Escolha uma opcao (1 a 6): ";
-    cout << "Escolha uma opcao (1 a 6): ";
+    cout << "[1]-Verificador de numeros repetidos: \n";
+    cout << "[2]-Identificador de numeros divisiveis:\n";
+    cout << "[3]- Produto escalar de 2 vetores\n";
+    cout << "[4]- Selecionador de maior matriz \n";
     cout << "Escolha uma opcao (1 a 6): ";
     cout << "Escolha uma opcao (1 a 6): ";
     cin >> escolha;
@@ -49,11 +49,61 @@ int main() {
             }
         }
             break;
-        case 3:
-            // Code for case 3
+        case 3:{
+            int tamanho=5;
+            int produtoescalar=0;
+            int veta[tamanho] ={-1};
+            int vetb[tamanho] ={-1};
+            for (int i=0; i<5; i++){
+                cout << "Digite o " << i + 1 << "º número do vetor A: ";
+                cin >> veta[i];
+            }
+            for (int i=0; i<5; i++){
+                cout << "Digite o " << i + 1 << "º número do vetor B: ";
+                cin >> vetb[i];
+            }
+            for (int i=0; i<5; i++){
+                produtoescalar=produtoescalar+veta[i]*vetb[i];
+            }
+            cout << produtoescalar;
+        }
+            
             break;
         case 4:
-            // Code for case 4
+            int matrixa[4][4];
+            int matrixb[4][4];
+            int matrixmaior [4][4];
+            cout << "A matriz A e:\n";
+            srand(time(0));
+            for (int i=0; i<4; i++){
+                for (int j=0; j<4; j++){
+                matrixa[i][j] = rand() %99+1;
+                cout << matrixa[i][j] << " ";
+                }
+                cout << endl;
+            }
+            cout << "A matriz B e:\n";
+            srand(time(0)+1);
+            for (int i=0; i<4; i++){
+                for (int j=0; j<4; j++){
+                matrixb[i][j] = rand() %99+1;
+                cout << matrixb[i][j] << " ";
+                }
+                cout << endl;
+            }
+            cout << "A matriz com os maiores numeros e:\n";
+            for (int i=0; i<4; i++){
+                for (int j=0; j<4; j++){
+                if (matrixa[i][j] < matrixb [i][j]){
+                    matrixmaior[i][j]=matrixb[i][j];
+                }
+                else{
+                    matrixmaior[i][j]=matrixa[i][j];
+                }
+                cout << matrixmaior[i][j] <<" ";
+                }
+                cout << endl;
+            }
             break;
         case 5:
             // Code for case 5
