@@ -6,7 +6,11 @@ using namespace std;
 
 int main() {
     int escolha;
-
+    cout << "[1]-Verificador de numeros repetidos: ";
+    cout << "[2]-Identificador de numeros divisiveis:";
+    cout << "Escolha uma opcao (1 a 6): ";
+    cout << "Escolha uma opcao (1 a 6): ";
+    cout << "Escolha uma opcao (1 a 6): ";
     cout << "Escolha uma opcao (1 a 6): ";
     cin >> escolha;
 
@@ -29,8 +33,21 @@ int main() {
 
             break;
         }
-        case 2:
-            // Code for case 2
+        case 2:{
+            int tamanho = 10;
+            int divisor;
+            int vet[tamanho] ={-1};
+            for (int i = 0; i < 10; i++) {
+                cout << "Digite o " << i + 1 << "º número: ";
+                cin >> vet[i];
+            }
+            cout << "digite o numero divisor:";
+            cin  >> divisor;
+            for (int i=0; i<10; i++){
+                if (vet[i]%divisor ==0)
+                    cout << vet[i] <<endl;
+            }
+        }
             break;
         case 3:
             // Code for case 3
