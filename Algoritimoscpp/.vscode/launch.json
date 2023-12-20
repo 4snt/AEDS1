@@ -9,7 +9,7 @@
       "stopAtEntry": false,
       "externalConsole": true,
       "cwd": "c:/Users/muril/OneDrive/Documents/DEV/AEDS1/Algoritimoscpp",
-      "program": "C:/Users/muril/OneDrive/Documents/DEV/AEDS1/Algoritimoscpp/output",
+      "program": "c:/Users/muril/OneDrive/Documents/DEV/AEDS1/Algoritimoscpp/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
