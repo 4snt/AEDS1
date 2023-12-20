@@ -6,11 +6,12 @@ using namespace std;
 
 int main() {
     int escolha;
-    cout << "[1]-Verificador de numeros repetidos: \n";
-    cout << "[2]-Identificador de numeros divisiveis:\n";
+    cout << "[1]- Verificador de numeros repetidos: \n";
+    cout << "[2]- Identificador de numeros divisiveis:\n";
     cout << "[3]- Produto escalar de 2 vetores\n";
     cout << "[4]- Selecionador de maior matriz \n";
-    cout << "Escolha uma opcao (1 a 6): ";
+    cout << "[5]- Soma da diagonal principal \n";
+    cout << "[6]- Gerador de Matriz Transposta \n";
     cout << "Escolha uma opcao (1 a 6): ";
     cin >> escolha;
 
@@ -69,7 +70,7 @@ int main() {
         }
             
             break;
-        case 4:
+        case 4:{
             int matrixa[4][4];
             int matrixb[4][4];
             int matrixmaior [4][4];
@@ -104,12 +105,58 @@ int main() {
                 }
                 cout << endl;
             }
+        }
             break;
-        case 5:
-            // Code for case 5
+        case 5:{
+            int matrix[3][3];
+            for (int i=0; i<3; i++){
+                for(int j=0; j<3; j++){
+                    cout << "Escreva o elemento [" << i <<"][" << j <<"] da matriz"<< endl;
+                    cin  >> matrix[i][j];  
+                }
+            }
+           for (int i=0; i<3; i++){
+                for(int j=0; j<3; j++){
+                    cout << "[" << matrix[i][j] <<"]";
+                }
+                cout << endl;
+           }
+                cout << "A soma dos numeros acima da diagonal principal e:"<< matrix[0][1]+matrix[1][0]<< endl;
+        }
             break;
-        case 6:
-            // Code for case 6
+        case 6:{
+            struct matriz{
+                int matrizinicial[3][3];
+                int matriztransposta[3][3];
+            };
+            matriz matriz;
+            for (int i=0; i<3; i++){
+                for(int j=0; j<3; j++){
+                    cout << "Escreva o elemento [" << i <<"][" << j <<"] da matriz"<< endl;
+                    cin  >> matriz.matrizinicial[i][j];
+                }
+            }
+            for (int i=0; i<3; i++){
+                for(int j=0; j<3; j++){
+                    matriz.matriztransposta[j][i]=matriz.matrizinicial[i][j];
+                }
+            }
+            cout <<"Sua Matriz é:\n";
+            for (int i=0; i<3; i++){
+                for(int j=0; j<3; j++){
+                    cout << "[" << matriz.matrizinicial[i][j] <<"]";
+                }
+                cout << endl;
+            }
+            cout <<"Sua Matriz Transposta é:\n";
+            for (int i=0; i<3; i++){
+                for(int j=0; j<3; j++){
+                    cout << "[" << matriz.matriztransposta[i][j] <<"]";
+                }
+                cout << endl;
+            }
+
+        }
             break;
         default:
             cout << "Escolha inválida." << endl;
