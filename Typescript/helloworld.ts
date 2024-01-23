@@ -1,5 +1,5 @@
 const nome= "Murilo";
-const canal= "CFBcursos";
+const canal= "Hello World";
 
 console.log(nome);
 console.log(canal);
