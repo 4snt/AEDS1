@@ -39,6 +39,11 @@ int main() {
         if (sn==s || sn== S){
             cout << "------------------------------\n";
             cout << "Escolha oque deseja alterar na ficha do funcionario\n";
+            cout << "-[1]- Rua---------------------\n"';
+            cout << "-[2]- Nome--------------------\n"';
+            cout << "-[3]- Inscrição---------------\n"';
+            cout << "-[1]- Rua---------------------\n"';
+            cout << "-[1]- Rua---------------------\n"';
         }
         
         cout << "--------------------------------\n";
