@@ -3,45 +3,62 @@
 using namespace std;
 
 char sn;
-
 struct Ficha {
     string rua, nome;
     string inscri;
     string cep;
     int numero;
-    long long cpf;  // Use a long long for CPF to avoid potential overflow
+    long long cpf;  
 };
 
 int main() {
-    const int maxEmployees = 100;
-    Ficha empregados[maxEmployees];
+    const int MaxEmpregados = 1000;
+    Ficha empregados[MaxEmpregados];
 
-    for (int i = 0; i < maxEmployees; i++) {
-        cout << "Enter the Name of employee N*:" << i + 1 << endl;
-        cin >> empregados[i].nome;
-        cout << "What is the cep of the employee?" << endl;
-        cin >> empregados[i].cep;
-        cout << "What is the N* registration of the employee?" << endl;
-        cin >> empregados[i].inscri;
-        cout << "What is the street of the employee?" << endl;
-        cin >> empregados[i].rua;
-        cout << "What is the Number of the employee?" << endl;
-        cin >> empregados[i].numero;
-        cout << "What is the CPF of the employee?" << endl;
-        cin >> empregados[i].cpf;
+    cout << "--------------------------------\n";
+    cout << "Bem vindo a ficha de empregados-\n";
+    cout << "Digite a matricula do empregado:\n";
+    cout << "--------------------------------\n";
+    
+    int matricula;
+    cin >> matricula;
+    
+    if (matricula >= 0 && matricula < MaxEmpregados) {
 
-        cout << "Do you want to Continue? [s/n]";
+        cout << "--------------------------------\n";
+        cout << "Ficha do colaborador Matricula: [" << matricula << "]\n";
+        cout << "Rua: " << empregados[matricula].rua << "\n";
+        cout << "Nome: " << empregados[matricula].nome << "\n";
+        cout << "Inscricao: " << empregados[matricula].inscri << "\n";
+        cout << "CEP: " << empregados[matricula].cep << "\n";
+        cout << "Numero: " << empregados[matricula].numero << "\n";
+        cout << "CPF: " << empregados[matricula].cpf << "\n";
+        cout << "--------------------------------\n";
+        cout << "Deseja alterar algum dado do funcionario?[s/n]";
         cin >> sn;
-
-        cout << "Name of employee " << i + 1 << ": " << empregados[i].nome << " || Registration N*: " << empregados[i].inscri << endl;
-        cout << "Employee's Details: \n";
-        cout << "CEP: " << empregados[i].cep << " || Street: " << empregados[i].rua << endl;
-        cout << "Phone Number: " << empregados[i].numero << " || CPF: " << empregados[i].cpf << endl;
-
-        if (sn == 'n' || sn == 'N') {
-            break;
+        if (sn==s || sn== S){
+            cout << "------------------------------\n";
+            cout << "Escolha oque deseja alterar na ficha do funcionario\n";
         }
+        
+        cout << "--------------------------------\n";
+        cout << "-Digite as informacoes do empregado:\n";
+        cout << "Rua: ";
+        cin >> empregados[matricula].rua;
+        cout << "Nome: ";
+        cin >> empregados[matricula].nome;
+        cout << "Inscricao: ";
+        cin >> empregados[matricula].inscri;
+        cout << "CEP: ";
+        cin >> empregados[matricula].cep;
+        cout << "Numero: ";
+        cin >> empregados[matricula].numero;
+        cout << "CPF: ";
+        cin >> empregados[matricula].cpf;
+    } else {
+        cout << "Matricula invalida. Digite novamente:\n";
+        cin >> matricula;
     }
-
+    
     return 0;
 }
