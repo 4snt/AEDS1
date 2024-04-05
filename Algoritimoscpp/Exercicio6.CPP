@@ -17,21 +17,25 @@ int main() {
 
     switch (escolha) {
         case 1: {
-            int tamanho = 20;
-            int vet[tamanho] ={-1};
+            int vet[20];
             for (int i = 0; i < 20; i++) {
                 cout << "Digite o " << i + 1 << "º número: ";
                 cin >> vet[i];
             }
             cout << "Números digitados: ";
             for (int i = 0; i < 20; i++) {
-                int j=i-1;
-                if (vet[i]!=vet[j]){
-                cout << vet[i] << " ";
+                bool repetido = false;
+                for (int j = 0; j < i; j++) {
+                    if (vet[i] == vet[j]) {
+                        repetido = true;
+                        break;
+                    }
+                }
+                if (!repetido) {
+                    cout << vet[i] << " ";
                 }
             }
             cout << endl;
-
             break;
         }
         case 2:{
